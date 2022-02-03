@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet"> 
+    <title>Sorting Balls Game</title>
+</head>
+<body>
+<h1 id="won-level">Congrats, you completed this level!</h1>
+<h1 id="won-game">Congrats, you finished the game!</h1>
+<div id="buttons">
+	<button id='new-game'>New Game</button>
+    <button id='next-level'>Next Level</button>
+    <button id='add-tube' title="Add another tube" class='support'>+
+        <span>Add tube</span>
+    </button>
+    <button id='faq' title="FAQ" class='support'>?
+        <span>FAQ</span>
+    </button>
+    <button id='restart' title="restart" class='support'>&#x21bb
+        <span>Restart the level</span>
+    </button>
+    <div id="model">
+        <h2>Hey, let's go over some rules!</h2>
+        <h4>1. The goal is to sort all the balls of the same color in one tube.</h4>
+        <h4>2. You can add additional tube to assist you in sorting the balls.</h4>
+        <h4>3. Complete all 8 levels of the game.</h4>
+        <h4>4. If any of the levels get too hard, use restart buttin to create completely new level.</h4>
+        <h4>5. Enjoy the game!</h4>
+        <div>
+            <button id="close-button">Close</button>
+        </div>
+    </div>
+</div>
+    <div id="game">
+        <div class="tube" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div>    
+        <div class="tube" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div> 
+        <div class="tube" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div> 
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

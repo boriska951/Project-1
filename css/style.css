@@ -1,0 +1,203 @@
+html {
+	height: 100%;
+    background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm218batch4-katie-17.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=bdc44a4b99f9139db340c6c812339704); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	position: relative;
+}
+
+#model {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width: 30rem;
+    height: 20rem;
+    background-color: rgb(226, 203, 101);
+    border-radius: 2rem;
+    transform: translate(-50%,-50%) scale(0);
+    box-shadow: 0 2rem 3rem black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    position:fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1.open {
+    animation: open  1s forwards, color-change 1s infinite;
+}
+
+h1.close {
+    animation: close 1s forwards, color-change 1s infinite;
+}
+
+@keyframes color-change {
+    0% { color: rgb(228, 80, 166); }
+    50% { color: rgb(99, 71, 145); }
+    100% { color: rgb(228, 80, 166); }
+}
+
+h4 {
+    margin: 7px;
+}
+
+#model.open {
+    animation: open 1s forwards;
+}
+
+#model.close {
+    animation: close 1s forwards;
+}
+
+@keyframes open {
+    0% {
+        transform: translate(-50%,-50%) scale(0);
+    }
+    50% {
+        transform: translate(-50%,-50%) scale(1.2);
+    }
+    70% {
+        transform: translate(-50%,-50%) scale(.8);
+    }
+    100% {
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+
+@keyframes close {
+    100% {
+        transform: translate(-50%,-50%) scale(0);
+    }
+    50% {
+        transform: translate(-50%,-50%) scale(1.2);
+    }
+    30% {
+        transform: translate(-50%,-50%) scale(.8);
+    }
+    0% {
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+
+button {
+	display: inline-block;
+    align-items: center;
+	position: relative;
+	margin: 30px 30px;
+	padding: 10px 20px;
+	cursor: pointer;
+    background-image: linear-gradient(to right, rgb(106, 108, 209), rgb(209, 57, 128));
+	border: none;
+	border-radius: .4em;
+    transition: .25s;
+}
+
+button:hover{
+    background-image: linear-gradient(to right, rgb(106, 108, 209), rgb(143, 27, 143));
+    transform: translateY(5px);
+}
+#next-level {
+    display: none;
+}
+
+#add-tube {
+    display: none;
+    border-radius: 50%;
+    color: white;
+    background: none;
+    font-size: 20px;
+    border-style:solid;
+    cursor: pointer;
+}
+
+#restart {
+    font-family: Lucida Sans Unicode;
+    display: none;
+    border-radius: 50%;
+    color: white;
+    background: none;
+    font-size: 20px;
+    border-style:solid;
+    cursor: pointer;
+}
+
+#faq {
+    display: none;
+    border-radius: 50%;
+    color: white;
+    background: none;
+    font-size: 20px;
+    border-style:solid;
+    cursor: pointer;
+}
+
+.support:hover {
+        border: 1px solid #888;
+        background-color: #ddd;
+}
+
+#game {
+    display: flex;
+    align-items: center;
+	position: relative;
+    flex-direction: wrap;
+}
+
+.tube {
+    display: none;
+    margin: 30px;
+    height: 210px;
+    width: 52px;
+    position: relative;
+    flex-direction: column-reverse;
+    border: 1px solid white;
+}
+
+.balls {  
+    position: relative;
+    align-self: flex-end;
+    cursor: move;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; 
+
+}
+
+.support span {
+    z-index: 15;
+    display: none;
+    padding: 15px 20px;
+    margin-top: -15px;
+    margin-left: 15px;
+    width: 30px;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  
+.support:hover span {
+    display: flex;
+    position: absolute;
+    color: #111;
+    border: 1px solid #DCA;
+    background: #fffAF0;
+}
